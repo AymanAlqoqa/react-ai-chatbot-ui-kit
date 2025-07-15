@@ -77,6 +77,7 @@
 - `src/main.tsx` (React root)
 - `index.html` (root div)
 
+
 ## 9. OpenAI Integration
 - Add `.env` file:
   ```env
@@ -84,14 +85,32 @@
   ```
 - In `formatMessage.ts`, use `import.meta.env.VITE_OPENAI_API_KEY` for API calls.
 
-## 10. Run & Test
+## 10. License Validation (Production/Commercial Use)
+- You will receive a signed license key and a public key from the vendor.
+- Add these to your `.env`:
+  ```env
+  VITE_LICENSE_KEY=AI-CHATBOT-UIKIT-2025-002.K0KBScotwXOL5UzR7AAaCJbJ59TXLeJcy8kX1jvuxy1uzXuU11h9lFNmXhzQnA1VGTWkC+e42Lsg/7cF25HKwcE41f77ypGg8ncjMUj9ZMSTXh1EWWziVYm98dJiyM5owfbHJZgq7PjlvDoIp5N+RoYkrDjtDis7u33IeOpzeXDQ5LLxpYEYeMHtvONT/jxzus0wtJmt8K3CUB4cedarUuboAfrvP17xZk9vNPFDeHQn4q4CHGH3ezUzsTUpC1wr1y4TLbXofXYml2waaLbdm7N38kOfX27UY9Lw//w/wR2AOyqBQpTFZWKXppXeumVh4QSuvCesR3xwDq4DcyBfkg==
+  VITE_PUBLIC_KEY="-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvU76mMrKyI526huNblUU\nUu/PzymoKM1cu9PL9YQ4yFPsJiNSBEJiVjq5GJScfeRWZGobpHrg46AYU2WMqY+5\naA7LQAXMkwew2uxdIhlSot6zEnwaIn2ZhbYMTV4oIA+NtiK/osh8Y4m5x/GitV/P\nXW9EEtuwlhLH/SS5Kx9Es14HoJ2P18wuHkvmW/RrX5A5WQwk9T7sf86V3aIVELJp\nwg6nBUQMHTxHPbX+K11ToBtccbbpHEAfrHrw9go1GBlGpnHys/clmM7REHAqWTRm\nTa49RqreWBjLIoPSYZBexyE18E0CpoW/ouq6jlNo1X0RXuhDW+gYl+E+y83mwKsD\n4QIDAQAB\n-----END PUBLIC KEY-----"
+  ```
+- `VITE_LICENSE_KEY` must be a single line. `VITE_PUBLIC_KEY` must be a single line with all newlines replaced by `\n` and wrapped in double quotes.
+- The UI kit will only work if the license key is valid for the provided public key.
+- In your app, pass these to the chat container:
+  ```tsx
+  <ChatContainer
+    licenseKey={import.meta.env.VITE_LICENSE_KEY}
+    publicKey={import.meta.env.VITE_PUBLIC_KEY}
+    theme={lightTheme}
+  />
+  ```
+
+## 11. Run & Test
 - Start dev server:
   ```bash
   npm run dev
   ```
 - Visit the local URL to test the chatbot UI.
 
-## 11. Extra Features
+## 12. Extra Features
 - Add theme toggle in `ChatContainer` for light/dark mode.
 - File upload and code snippet support in `formatMessage.ts` and `ChatMessage.tsx`.
 - Customize themes, avatars, and UI as needed.
