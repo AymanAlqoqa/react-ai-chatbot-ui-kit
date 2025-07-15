@@ -1,0 +1,49 @@
+{
+  "name": "react-ai-chatbot-ui-kit",
+  "version": "0.1.0",
+  "description": "A customizable React chatbot UI kit with OpenAI integration demo.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "react",
+    "chatbot",
+    "ui",
+    "openai",
+    "component",
+    "typescript"
+  ],
+  "author": "Ayman Alqoqa <aalqouqa@email.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aalqouqa/react-ai-chatbot-ui-kit"
+  },
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "styled-components": "^6.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.6.0",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "@types/styled-components": "^5.1.34",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.0"
+  }
+}

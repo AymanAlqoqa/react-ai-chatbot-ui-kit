@@ -1,0 +1,1 @@
+export { sendMessageToAI } from './formatMessage';
